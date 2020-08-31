@@ -3,6 +3,7 @@ package sample;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 public class Controller {
     @FXML
@@ -40,133 +41,101 @@ public class Controller {
     @FXML
     Button buttonClr;
 
+    @FXML
+    TextField display;
 
-    @FXML
-    Label currentNumber;
-    @FXML
-    Label storedNumber;
+    String action; // przechowuje informacje o nacisnietym przycisku
+    double first = 0; // po nacisniecu przycisku funkcji przechowuje tu pierwszy numer i zeruje
+    double second = 0; // tu druga liczba, przechowywana po nacisnieciu =
+    // wynik liczy z dwoch liczb, sprawdza ktory zostal nacisniety
+
 
     // numeric buttons
     public void ZeroClicked() {
-        String number = "0";
-        String currentValue = currentNumber.getText();
-        currentNumber.setText(currentValue + number);
+        display.setText(display.getText() + "0");
     }
     public void OneClicked() {
-        String number = "1";
-        String currentValue = currentNumber.getText();
-        currentNumber.setText(currentValue + number);
+        display.setText(display.getText() + "1");
     }
     public void TwoClicked() {
-        String number = "2";
-        String currentValue = currentNumber.getText();
-        currentNumber.setText(currentValue + number);
+        display.setText(display.getText() + "2");
     }
     public void ThreeClicked() {
-        String number = "3";
-        String currentValue = currentNumber.getText();
-        currentNumber.setText(currentValue + number);
+        display.setText(display.getText() + "3");
     }
     public void FourClicked() {
-        String number = "4";
-        String currentValue = currentNumber.getText();
-        currentNumber.setText(currentValue + number);
+        display.setText(display.getText() + "4");
     }
     public void FiveClicked() {
-        String number = "5";
-        String currentValue = currentNumber.getText();
-        currentNumber.setText(currentValue + number);
+        display.setText(display.getText() + "5");
     }
     public void SixClicked() {
-        String number = "6";
-        String currentValue = currentNumber.getText();
-        currentNumber.setText(currentValue + number);
+        display.setText(display.getText() + "6");
     }
     public void SevenClicked() {
-        String number = "7";
-        String currentValue = currentNumber.getText();
-        currentNumber.setText(currentValue + number);
+        display.setText(display.getText() + "7");
     }
     public void EightClicked() {
-        String number = "8";
-        String currentValue = currentNumber.getText();
-        currentNumber.setText(currentValue + number);
+        display.setText(display.getText() + "8");
     }
     public void NineClicked() {
-        String number = "9";
-        String currentValue = currentNumber.getText();
-        currentNumber.setText(currentValue + number);
+        display.setText(display.getText() + "9");
     }
 
     // action buttons
-    // todo dziala ale konsola wywala bledy
     public void AddClicked() {
-        String currentValue = currentNumber.getText();
-        String storedValue = storedNumber.getText();
+        action = "add";
 
-        // przekazuje wyzej
-        storedNumber.setText(currentValue);
-
-        // zeruje labelCurrent
-        currentNumber.setText("");
-
-        // dodaje to co mamy
-        storedNumber.setText(String.valueOf(Integer.parseInt(storedValue) + Integer.parseInt(currentValue)));
+        first = Double.parseDouble(display.getText());
+        display.setText("0");
     }
 
     public void SubtClicked() {
-        String currentValue = currentNumber.getText();
-        String storedValue = storedNumber.getText();
+        action = "subt";
 
-        // przekazuje wyzej
-        storedNumber.setText(currentValue);
-
-        // zeruje labelCurrent
-        currentNumber.setText("");
-
-        // odejmuje to co mamy
-        storedNumber.setText(String.valueOf(Integer.parseInt(storedValue) - Integer.parseInt(currentValue)));
+        first = Double.parseDouble(display.getText());
+        display.setText("0");
     }
 
     public void MultiClicked() {
-        String currentValue = currentNumber.getText();
-        String storedValue = storedNumber.getText();
+        action = "multi";
 
-        // przekazuje wyzej
-        storedNumber.setText(currentValue);
-
-        // zeruje labelCurrent
-        currentNumber.setText("");
-
-        // mnozy to co mamy
-        storedNumber.setText(String.valueOf(Integer.parseInt(storedValue) * Integer.parseInt(currentValue)));
+        first = Double.parseDouble(display.getText());
+        display.setText("0");
     }
 
     public void DivClicked() {
-        String currentValue = currentNumber.getText();
-        String storedValue = storedNumber.getText();
+        action = "div";
 
-        // przekazuje wyzej
-        storedNumber.setText(currentValue);
-
-        // zeruje labelCurrent
-        currentNumber.setText("");
-
-        // dzieli to co mamy
-        // todo dodac wyjatek dzielenia przez 0
-        storedNumber.setText(String.valueOf(Integer.parseInt(storedValue) / Integer.parseInt(currentValue)));
+        first = Double.parseDouble(display.getText());
+        display.setText("0");
     }
 
     public void EqualsClicked() {
-        // todo przeniesc wszystkie dzialania do equals zeby liczylo po kliknieciu, bo sa bledy
-        // po dwukrotnym nacisnieciu = wynik sie nie pokazuje
-        // = wyswietla poprzednią liczbe zamiast wyniku
-        currentNumber.setText(storedNumber.getText());
-        storedNumber.setText("");
+        second = Double.parseDouble(display.getText());
+
+        switch (action) {
+            case "add":
+                display.setText(String.valueOf(first + second));
+                break;
+            case "subt":
+                display.setText(String.valueOf(first - second));
+                break;
+            case "multi":
+                display.setText(String.valueOf(first * second));
+                break;
+            case "div":
+                display.setText(String.valueOf(first / second));    // wstepnie bez uwzglednienia 0
+                break;
+        }
     }
 
     public void ClearClicked() {
-        storedNumber.setText("");
-        currentNumber.setText("");
+        display.setText("0");
     }
 }
+
+// bardziej zaawnsowana wersja z wykorzystaniem stosu i notacji BNF np.
+//    2 2 + 5 -
+//    4 5 -
+//    -1
