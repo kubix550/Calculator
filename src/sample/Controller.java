@@ -2,7 +2,6 @@ package sample;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class Controller {
@@ -27,7 +26,6 @@ public class Controller {
     @FXML
     Button button9;
 
-
     @FXML
     Button buttonAdd;
     @FXML
@@ -40,14 +38,14 @@ public class Controller {
     Button buttonEquals;
     @FXML
     Button buttonClr;
-
     @FXML
     TextField display;
 
-    String action; // przechowuje informacje o nacisnietym przycisku
-    double first = 0; // po nacisniecu przycisku funkcji przechowuje tu pierwszy numer i zeruje
-    double second = 0; // tu druga liczba, przechowywana po nacisnieciu =
-    // wynik liczy z dwoch liczb, sprawdza ktory zostal nacisniety
+
+    String action;               // przechowuje informacje o nacisnietym przycisku
+    double firstNumber = 0;      // po nacisniecu przycisku funkcji przechowuje tu pierwszy numer i zeruje display
+    double secondNumber = 0;     // tu druga liczba, przechowywana po nacisnieciu =
+                                 // wynik liczy z dwoch liczb, sprawdza ktory przycisk zostal nacisniety do wykonania dzialania
 
 
     // numeric buttons
@@ -86,52 +84,58 @@ public class Controller {
     public void AddClicked() {
         action = "add";
 
-        first = Double.parseDouble(display.getText());
-        display.setText("0");
+        firstNumber = Double.parseDouble(display.getText());
+        display.setText("");
     }
 
     public void SubtClicked() {
         action = "subt";
 
-        first = Double.parseDouble(display.getText());
-        display.setText("0");
+        firstNumber = Double.parseDouble(display.getText());
+        display.setText("");
     }
 
     public void MultiClicked() {
         action = "multi";
 
-        first = Double.parseDouble(display.getText());
-        display.setText("0");
+        firstNumber = Double.parseDouble(display.getText());
+        display.setText("");
     }
 
     public void DivClicked() {
         action = "div";
 
-        first = Double.parseDouble(display.getText());
-        display.setText("0");
+        firstNumber = Double.parseDouble(display.getText());
+        display.setText("");
     }
 
     public void EqualsClicked() {
-        second = Double.parseDouble(display.getText());
+        secondNumber = Double.parseDouble(display.getText());
 
         switch (action) {
             case "add":
-                display.setText(String.valueOf(first + second));
+                display.setText(String.valueOf(firstNumber + secondNumber));
                 break;
             case "subt":
-                display.setText(String.valueOf(first - second));
+                display.setText(String.valueOf(firstNumber - secondNumber));
                 break;
             case "multi":
-                display.setText(String.valueOf(first * second));
+                display.setText(String.valueOf(firstNumber * secondNumber));
                 break;
             case "div":
-                display.setText(String.valueOf(first / second));    // wstepnie bez uwzglednienia 0
+                // wyjatek dzielenia przez 0
+                if (secondNumber == 0) {
+                    display.setText("Dzielenie przez 0");
+                    break;
+                }
+
+                display.setText(String.valueOf(firstNumber / secondNumber));
                 break;
         }
     }
 
     public void ClearClicked() {
-        display.setText("0");
+        display.setText("");
     }
 }
 

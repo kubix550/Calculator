@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 // fxml odpowiada za wyglad
 // controller to cala logika programu
 // main tylko uruchamia
-// todo: uporzadkowac kod, dodac wyjatek dzielenia, pozbyc sie '0' na poczatku liczb
+// todo: dodac customowy stylesheet
 
 public class Main extends Application {
 
