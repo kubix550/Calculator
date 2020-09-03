@@ -9,15 +9,15 @@ import javafx.stage.Stage;
 // fxml odpowiada za wyglad
 // controller to cala logika programu
 // main tylko uruchamia
-// todo: dodac customowy stylesheet
+// todo: dodac przeliczanie systemow liczbowych, zablokowac resize okienka, ulepszyc stylesheet
 
 public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Calculator v2");
-        primaryStage.setScene(new Scene(root, 350, 500));
+        primaryStage.setTitle("Calculator");
+        primaryStage.setScene(new Scene(root, 312, 467));
         primaryStage.show();
     }
 
