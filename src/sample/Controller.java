@@ -39,7 +39,15 @@ public class Controller {
     @FXML
     Button buttonClr;
     @FXML
+    Button buttonBinary;
+    @FXML
+    Button buttonOctal;
+    @FXML
+    Button buttonHexadecimal;
+
+    @FXML
     TextField display;
+
 
 
     String action;               // przechowuje informacje o nacisnietym przycisku
@@ -136,6 +144,18 @@ public class Controller {
 
     public void ClearClicked() {
         display.setText("");
+    }
+
+    public void BinaryClicked() {
+        display.setText(Integer.toBinaryString(Integer.parseInt(display.getText())));
+    }
+
+    public void OctalClicked() {
+        display.setText(Integer.toOctalString(Integer.parseInt(display.getText())));
+    }
+
+    public void HexadecimalClicked() {
+        display.setText(Integer.toHexString(Integer.parseInt(display.getText())));
     }
 }
 
