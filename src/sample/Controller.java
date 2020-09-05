@@ -44,6 +44,8 @@ public class Controller {
     Button buttonOctal;
     @FXML
     Button buttonHexadecimal;
+    @FXML
+    Button buttonDot;
 
     @FXML
     TextField display;
@@ -140,6 +142,10 @@ public class Controller {
                 display.setText(String.valueOf(firstNumber / secondNumber));
                 break;
         }
+    }
+
+    public void DotClicked() {
+        display.setText(display.getText() + ".");
     }
 
     public void ClearClicked() {

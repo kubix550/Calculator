@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 // fxml odpowiada za wyglad
 // controller to cala logika programu
 // main tylko uruchamia
-// todo: zablokowac resize okienka, ulepszyc stylesheet
+// todo: ulepszyc stylesheet,
 
 public class Main extends Application {
 
@@ -19,6 +19,9 @@ public class Main extends Application {
         primaryStage.setTitle("Calculator");
         primaryStage.setScene(new Scene(root, 312, 467));
         primaryStage.show();
+
+        // blokowanie resize
+        primaryStage.setResizable(false);
     }
 
 
