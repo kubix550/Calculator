@@ -4,12 +4,13 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 // fxml odpowiada za wyglad
 // controller to cala logika programu
 // main tylko uruchamia
-// todo: ulepszyc stylesheet,
+// todo: pokazywaie dodatkowych przyciskow do hex
 
 public class Main extends Application {
 
@@ -22,8 +23,10 @@ public class Main extends Application {
 
         // blokowanie resize
         primaryStage.setResizable(false);
-    }
 
+        // ikona
+        primaryStage.getIcons().add(new Image("images/icon.png"));
+    }
 
     public static void main(String[] args) {
         launch(args);

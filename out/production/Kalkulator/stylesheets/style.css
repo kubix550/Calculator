@@ -1,0 +1,32 @@
+/* Ghost white ver */
+.button
+{
+    -fx-background-color: #FBFBFF;
+}
+
+.background
+{
+    -fx-background-color: #FBFBFF;
+}
+
+.display
+{
+    -fx-background-color: #E4E4E4;
+}
+
+/* Experimental darkmode */
+.buttonDark
+{
+    -fx-background-color: #1B263B;
+}
+
+.backgroundDark
+{
+    -fx-background-color: #0D1B2A;
+}
+
+.displayDark
+{
+    -fx-background-color: #415A77;
+    /* E0E1DD */
+}

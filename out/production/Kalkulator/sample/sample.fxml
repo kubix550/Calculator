@@ -117,7 +117,7 @@
             </GridPane>
             <AnchorPane layoutY="1.0" prefHeight="188.0" prefWidth="312.0">
                <children>
-                  <TextField fx:id="display" alignment="CENTER_RIGHT" editable="false" layoutY="86.0" prefHeight="40.0" prefWidth="312.0" styleClass="display" stylesheets="@../stylesheets/style.css">
+                  <TextField fx:id="display" alignment="CENTER_RIGHT" editable="false" layoutY="86.0" prefHeight="40.0" prefWidth="312.0" styleClass="display" stylesheets="@../stylesheets/style.css" text="0">
                      <font>
                         <Font size="22.0" />
                      </font>

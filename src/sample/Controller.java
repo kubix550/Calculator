@@ -58,36 +58,76 @@ public class Controller {
                                  // wynik liczy z dwoch liczb, sprawdza ktory przycisk zostal nacisniety do wykonania dzialania
 
 
+    // check for letters in display
+//            if (display.getText().matches("[0-9]+") || display.getText().contains(".")){
+//    dzialanie przycisku
+//    }
+//    // jezeli znajdzie litery to ustawia display na 0
+//            else display.setText("0");
+//}
+
     // numeric buttons
     public void ZeroClicked() {
-        display.setText(display.getText() + "0");
-    }
+        if (display.getText().equals("0")) {
+            display.setText("0");
+        }
+        else display.setText(display.getText() + "0");
+        }
+
     public void OneClicked() {
-        display.setText(display.getText() + "1");
+        if (display.getText().equals("0")) {
+            display.setText("1");
+        }
+        else display.setText(display.getText() + "1");
     }
+
     public void TwoClicked() {
-        display.setText(display.getText() + "2");
+        if (display.getText().equals("0")) {
+            display.setText("2");
+        }
+        else display.setText(display.getText() + "2");
     }
     public void ThreeClicked() {
-        display.setText(display.getText() + "3");
+        if (display.getText().equals("0")) {
+            display.setText("3");
+        }
+        else display.setText(display.getText() + "3");
     }
     public void FourClicked() {
-        display.setText(display.getText() + "4");
+        if (display.getText().equals("0")) {
+            display.setText("4");
+        }
+        else display.setText(display.getText() + "4");
     }
     public void FiveClicked() {
-        display.setText(display.getText() + "5");
+        if (display.getText().equals("0")) {
+            display.setText("5");
+        }
+        else display.setText(display.getText() + "5");
     }
     public void SixClicked() {
-        display.setText(display.getText() + "6");
+        if (display.getText().equals("0")) {
+            display.setText("6");
+        }
+        else display.setText(display.getText() + "6");
     }
     public void SevenClicked() {
-        display.setText(display.getText() + "7");
+        if (display.getText().equals("0")) {
+            display.setText("7");
+        }
+        else display.setText(display.getText() + "7");
     }
     public void EightClicked() {
-        display.setText(display.getText() + "8");
+        if (display.getText().equals("0")) {
+            display.setText("8");
+        }
+        else display.setText(display.getText() + "8");
     }
     public void NineClicked() {
-        display.setText(display.getText() + "9");
+        if (display.getText().equals("0")) {
+            display.setText("9");
+        }
+        else display.setText(display.getText() + "9");
     }
 
     // action buttons
@@ -95,28 +135,28 @@ public class Controller {
         action = "add";
 
         firstNumber = Double.parseDouble(display.getText());
-        display.setText("");
+        display.setText("0");
     }
 
     public void SubtClicked() {
         action = "subt";
 
         firstNumber = Double.parseDouble(display.getText());
-        display.setText("");
+        display.setText("0");
     }
 
     public void MultiClicked() {
         action = "multi";
 
         firstNumber = Double.parseDouble(display.getText());
-        display.setText("");
+        display.setText("0");
     }
 
     public void DivClicked() {
         action = "div";
 
         firstNumber = Double.parseDouble(display.getText());
-        display.setText("");
+        display.setText("0");
     }
 
     public void EqualsClicked() {
@@ -135,7 +175,7 @@ public class Controller {
             case "div":
                 // wyjatek dzielenia przez 0
                 if (secondNumber == 0) {
-                    display.setText("Dzielenie przez 0");
+                    display.setText("Division by 0");
                     break;
                 }
 
@@ -145,23 +185,37 @@ public class Controller {
     }
 
     public void DotClicked() {
-        display.setText(display.getText() + ".");
+        // blokada przed postawieniem kolejnej kropki na koncu lub drugiej kropki w liczbie
+        if (display.getText().endsWith(".") || display.getText().contains(".")) {
+            display.setText(display.getText());
+        }
+        // jezeli nie ma kropek, to mozna ja postawic
+        else display.setText(display.getText() + ".");
     }
 
     public void ClearClicked() {
-        display.setText("");
+        display.setText("0");
     }
 
     public void BinaryClicked() {
-        display.setText(Integer.toBinaryString(Integer.parseInt(display.getText())));
+        if (display.getText().contains(".")) {
+            display.setText("Double not supported");
+        }
+        else display.setText(Integer.toBinaryString(Integer.parseInt(display.getText())));
     }
 
     public void OctalClicked() {
-        display.setText(Integer.toOctalString(Integer.parseInt(display.getText())));
+        if (display.getText().contains(".")) {
+            display.setText("Double not supported");
+        }
+        else display.setText(Integer.toOctalString(Integer.parseInt(display.getText())));
     }
 
     public void HexadecimalClicked() {
-        display.setText(Integer.toHexString(Integer.parseInt(display.getText())));
+        if (display.getText().contains(".")) {
+            display.setText("Double not supported");
+        }
+        else display.setText(Integer.toHexString(Integer.parseInt(display.getText())));
     }
 }
 
