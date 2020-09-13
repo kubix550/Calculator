@@ -7,10 +7,9 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-// fxml odpowiada za wyglad
-// controller to cala logika programu
-// main tylko uruchamia
-// todo: pokazywaie dodatkowych przyciskow do hex
+// fxml: odpowiada za wyglad
+// controller: cala logika programu
+// main: tylko uruchamia
 
 public class Main extends Application {
 
