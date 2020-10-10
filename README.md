@@ -16,6 +16,10 @@ Some of the main focusCalc features
 * convinient converters from decimal to binary, octal or hexadecimal numeral systems
 * compact and minimalistic design
 
+## Preview
+
+<img src="https://i.imgur.com/BSTwII9.png" alt="focusCalc_preview" width="450"/>
+
 ## Technologies
 
 The project uses
