@@ -16,18 +16,19 @@ Some of the main focusCalc features
 * convinient converters from decimal to binary, octal or hexadecimal numeral systems
 * compact and minimalistic design
 
-## Preview
-
-<img src="https://i.imgur.com/BSTwII9.png" alt="focusCalc_preview" width="450"/>
-
 ## Technologies
 
 The project uses
 * **Java 8** - general functioning
 * **JavaFX** - visual part of the application
-* **Maven** - ability to build the app
-* **HTML and CSS** - basic design
+* **CSS** - basic design
 
 ## Launch
 
-work in progress
+* you need **Java 8 or higher** for the application to work properly
+* a stable and most recent version of focusCalc can be found in **"releases"**
+* if the application doesn't run by double-clicking, execute the command **java -jar focusCalc.jar** in the directory with the application
+
+## Preview
+
+<img src="https://i.imgur.com/BSTwII9.png" alt="focusCalc_preview" width="450"/>
