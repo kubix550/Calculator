@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="600.0" maxWidth="370.0" minHeight="600.0" minWidth="370.0" prefHeight="600.0" prefWidth="370.0" styleClass="mainBackground" stylesheets="@../stylesheets/style.css" xmlns="http://javafx.com/javafx/8.0.251" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.MainController">
+   <children>
+      <GridPane layoutX="15.0" layoutY="279.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="306.0" prefWidth="340.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="buttonDot" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#DotClicked" prefHeight="63.0" prefWidth="75.0" styleClass="mainButton" stylesheets="@../stylesheets/style.css" text="." textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="MADETOMMY" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="button0" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ZeroClicked" prefHeight="63.0" prefWidth="75.0" styleClass="mainButton" stylesheets="@../stylesheets/style.css" text="0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="MADETOMMY" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonEquals" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#EqualsClicked" prefHeight="63.0" prefWidth="75.0" styleClass="mainButton" stylesheets="@../stylesheets/style.css" text="=" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="MADETOMMY" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="button1" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#OneClicked" prefHeight="63.0" prefWidth="75.0" styleClass="mainButton" stylesheets="@../stylesheets/style.css" text="1" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="MADETOMMY" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="button2" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#TwoClicked" prefHeight="63.0" prefWidth="75.0" styleClass="mainButton" stylesheets="@../stylesheets/style.css" text="2" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="MADETOMMY" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="button3" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ThreeClicked" prefHeight="63.0" prefWidth="75.0" styleClass="mainButton" stylesheets="@../stylesheets/style.css" text="3" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="MADETOMMY" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="button4" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#FourClicked" prefHeight="63.0" prefWidth="75.0" styleClass="mainButton" stylesheets="@../stylesheets/style.css" text="4" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="MADETOMMY" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="button5" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#FiveClicked" prefHeight="63.0" prefWidth="75.0" styleClass="mainButton" stylesheets="@../stylesheets/style.css" text="5" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="MADETOMMY" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="button6" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#SixClicked" prefHeight="63.0" prefWidth="75.0" styleClass="mainButton" stylesheets="@../stylesheets/style.css" text="6" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="MADETOMMY" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="button7" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#SevenClicked" prefHeight="63.0" prefWidth="75.0" styleClass="mainButton" stylesheets="@../stylesheets/style.css" text="7" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="MADETOMMY" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="button8" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#EightClicked" prefHeight="63.0" prefWidth="75.0" styleClass="mainButton" stylesheets="@../stylesheets/style.css" text="8" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="MADETOMMY" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="button9" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#NineClicked" prefHeight="63.0" prefWidth="75.0" styleClass="mainButton" stylesheets="@../stylesheets/style.css" text="9" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="MADETOMMY" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonDiv" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#DivClicked" prefHeight="63.0" prefWidth="75.0" styleClass="greenButton" stylesheets="@../stylesheets/style.css" text="/" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="MADETOMMY" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonMulti" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#MultiClicked" prefHeight="63.0" prefWidth="75.0" styleClass="greenButton" stylesheets="@../stylesheets/style.css" text="x" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="MADETOMMY" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonSubt" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#SubtClicked" prefHeight="63.0" prefWidth="75.0" styleClass="greenButton" stylesheets="@../stylesheets/style.css" text="-" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="MADETOMMY" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonAdd" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#AddClicked" prefHeight="63.0" prefWidth="75.0" styleClass="greenButton" stylesheets="@../stylesheets/style.css" text="+" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="MADETOMMY" size="25.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+      <TextField fx:id="display" alignment="BOTTOM_RIGHT" editable="false" layoutX="4.0" layoutY="128.0" prefHeight="63.0" prefWidth="362.0" styleClass="mainBackground" stylesheets="@../stylesheets/style.css" text="0">
+         <font>
+            <Font name="MADETOMMY" size="30.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextField>
+      <GridPane layoutX="15.0" layoutY="204.0" prefHeight="63.0" prefWidth="340.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="buttonClr" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ClearClicked" prefHeight="63.0" prefWidth="75.0" styleClass="redButton" stylesheets="@../stylesheets/style.css" text="C" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="MADETOMMY" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonHexadecimal" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#HexadecimalClicked" prefHeight="63.0" prefWidth="75.0" styleClass="greenButton" stylesheets="@../stylesheets/style.css" text="hex" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="MADETOMMY" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonOctal" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#OctalClicked" prefHeight="63.0" prefWidth="75.0" styleClass="greenButton" stylesheets="@../stylesheets/style.css" text="octal" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="MADETOMMY" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonBinary" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#BinaryClicked" prefHeight="63.0" prefWidth="75.0" styleClass="greenButton" stylesheets="@../stylesheets/style.css" text="binary" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="MADETOMMY" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+      <Label layoutX="103.0" layoutY="24.0" styleClass="logoLabel" stylesheets="@../stylesheets/style.css" text="focusCalc">
+         <font>
+            <Font name="MADETOMMY" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="135.0" layoutY="60.0" opacity="0.5" styleClass="logoLabel" stylesheets="@../stylesheets/style.css" text="by @kubixDev">
+         <font>
+            <Font name="MADETOMMY" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -11,20 +11,25 @@ import javafx.stage.Stage;
 // controller: cala logika programu
 // main: tylko uruchamia
 
+// todo fix checkForLettes method for hexadecimal
+// todo custom title bar
+
 public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/resources/view/design.fxml"));
         primaryStage.setTitle("Calculator");
-        primaryStage.setScene(new Scene(root, 312, 467));
+        primaryStage.setScene(new Scene(root, 370, 600));
         primaryStage.show();
 
         // blokowanie resize
+        primaryStage.setScene(primaryStage.getScene());
         primaryStage.setResizable(false);
+        primaryStage.sizeToScene();
 
         // ikona
-        primaryStage.getIcons().add(new Image("images/icon.png"));
+        primaryStage.getIcons().add(new Image("/resources/images/icon.png"));
     }
 
     public static void main(String[] args) {

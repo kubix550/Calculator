@@ -1,10 +1,10 @@
-package sample;
+package sample.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
-public class Controller {
+public class MainController {
     @FXML
     Button button0;
     @FXML
@@ -63,11 +63,6 @@ public class Controller {
         if (display.getText().matches("[A-Za-z]+") || display.getText().contains(" ")){
             display.setText("0");
         }
-
-        // tymczasowe rozwiazanie zeby znalezc bledy w regex
-//        if (display.getText().startsWith("D")) {
-//            display.setText("0");
-//        }
     }
 
     // numeric buttons
