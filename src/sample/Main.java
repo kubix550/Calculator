@@ -11,7 +11,6 @@ import javafx.stage.Stage;
 // controller: cala logika programu
 // main: tylko uruchamia
 
-// todo fix checkForLettes method for hexadecimal
 // todo custom title bar
 
 public class Main extends Application {
@@ -29,7 +28,7 @@ public class Main extends Application {
         primaryStage.sizeToScene();
 
         // ikona
-        primaryStage.getIcons().add(new Image("/resources/images/icon.png"));
+        primaryStage.getIcons().add(new Image("/resources/images/appBoldIcon.png"));
     }
 
     public static void main(String[] args) {

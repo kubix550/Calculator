@@ -60,7 +60,7 @@ public class MainController {
 
     // checks for letters in display
     private void checkForLetters() {
-        if (display.getText().matches("[A-Za-z]+") || display.getText().contains(" ")){
+        if (display.getText().matches(".*[A-Za-z].*") || display.getText().contains(" ")){
             display.setText("0");
         }
     }
