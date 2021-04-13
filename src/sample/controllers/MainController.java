@@ -3,6 +3,9 @@ package sample.controllers;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+
+import java.awt.event.ActionEvent;
 
 public class MainController {
     @FXML
@@ -46,9 +49,13 @@ public class MainController {
     Button buttonHexadecimal;
     @FXML
     Button buttonDot;
+    @FXML
+    Button buttonMode;
 
     @FXML
     TextField display;
+    @FXML
+    AnchorPane mainPane;
 
 
 
@@ -56,6 +63,35 @@ public class MainController {
     double firstNumber = 0;      // po nacisniecu przycisku funkcji przechowuje tu pierwszy numer i zeruje display
     double secondNumber = 0;     // tu druga liczba, przechowywana po nacisnieciu =
                                  // wynik liczy z dwoch liczb, sprawdza ktory przycisk zostal nacisniety do wykonania dzialania
+
+
+    // odpowiada za przelaczanie trybow
+    private boolean isLightMode = true;
+
+    public void changeMode() {
+        isLightMode = !isLightMode;
+
+        if (isLightMode) {
+            setLightMode();
+        }
+        else {
+            setDarkMode();
+        }
+    }
+
+    private void setLightMode() {
+        mainPane.getStylesheets().remove("/resources/stylesheets/darkMode.css");
+        mainPane.getStylesheets().add("/resources/stylesheets/lightMode.css");
+        buttonMode.setText("\uD83C\uDF19");
+    }
+
+    private void setDarkMode() {
+        mainPane.getStylesheets().remove("/resources/stylesheets/lightMode.css");
+        mainPane.getStylesheets().add("/resources/stylesheets/darkMode.css");
+        buttonMode.setText("\uD83D\uDD06");
+    }
+
+
 
 
     // checks for letters in display

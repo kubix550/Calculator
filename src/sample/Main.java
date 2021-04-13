@@ -11,13 +11,12 @@ import javafx.stage.Stage;
 // controller: cala logika programu
 // main: tylko uruchamia
 
-// todo custom title bar
 
 public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/resources/view/design.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/resources/view/mainDesign.fxml"));
         primaryStage.setTitle("Calculator");
         primaryStage.setScene(new Scene(root, 370, 600));
         primaryStage.show();

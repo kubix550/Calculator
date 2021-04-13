@@ -1,62 +1,66 @@
 .mainBackground {
-    -fx-background-color: #ffffff;
-    -fx-text-fill: #343a40;
+    -fx-background-color: #201a30;
+    -fx-text-fill: #fafafa;
 }
 
 .mainButton {
-    -fx-background-color: #fafafa;
-    -fx-text-fill: #343a40;
+    -fx-background-color: #38304c;
+    -fx-text-fill: #fafafa;
     -fx-background-radius: 17;
 }
 
 .mainButton:hover {
-    -fx-background-color: #f0efef;
-    -fx-text-fill: #343a40;
+    -fx-background-color: #312a42;
+    -fx-text-fill: #fafafa;
     -fx-background-radius: 17;
 }
 
 .mainButton:pressed {
-    -fx-background-color: #e4e4e4;
-    -fx-text-fill: #343a40;
+    -fx-background-color: #2d283a;
+    -fx-text-fill: #fafafa;
     -fx-background-radius: 17;
 }
 
 .greenButton {
-    -fx-background-color: #ebfaf4;
+    -fx-background-color: #38304c;
     -fx-text-fill: #52ca9e;
     -fx-background-radius: 17;
 }
 
 .greenButton:hover {
-    -fx-background-color: #d7f8eb;
+    -fx-background-color: #312a42;
     -fx-text-fill: #52ca9e;
     -fx-background-radius: 17;
 }
 
 .greenButton:pressed {
-    -fx-background-color: #bcf4dd;
+    -fx-background-color: #2d283a;
     -fx-text-fill: #52ca9e;
     -fx-background-radius: 17;
 }
 
 .redButton {
-    -fx-background-color: #f8d9dd;
+    -fx-background-color: #38304c;
     -fx-text-fill: #d6273c;
     -fx-background-radius: 17;
 }
 
 .redButton:hover {
-    -fx-background-color: #f8ccd2;
+    -fx-background-color: #312a42;
     -fx-text-fill: #d6273c;
     -fx-background-radius: 17;
 }
 
 .redButton:pressed {
-    -fx-background-color: #f6bec5;
+    -fx-background-color: #2d283a;
     -fx-text-fill: #d6273c;
     -fx-background-radius: 17;
 }
 
 .logoLabel {
-    -fx-text-fill: linear-gradient(to right, #f20089, #bc00dd, #a100f2);
+    -fx-text-fill: #52476f;
+}
+
+.upperBar {
+    -fx-background-color: linear-gradient(to right, #f20089, #bc00dd, #a100f2);
 }
