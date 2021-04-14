@@ -7,11 +7,6 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-// fxml: odpowiada za wyglad
-// controller: cala logika programu
-// main: tylko uruchamia
-
-
 public class Main extends Application {
 
     @Override
@@ -21,12 +16,12 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root, 370, 600));
         primaryStage.show();
 
-        // blokowanie resize
+        // blocking resize
         primaryStage.setScene(primaryStage.getScene());
         primaryStage.setResizable(false);
         primaryStage.sizeToScene();
 
-        // ikona
+        // app icon
         primaryStage.getIcons().add(new Image("/resources/images/appBoldIcon.png"));
     }
 

@@ -1,19 +1,20 @@
-<img src="https://i.imgur.com/ixs5WLy.png" alt="focusCalc" width="500"/>
+<img src="https://i.imgur.com/B74Oe2M.png" alt="focusCalc" width="400"/>
 
-[![forthebadge](https://forthebadge.com/images/badges/made-with-java.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-java.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 
 ---
 
 ## About
 
-**focusCalc** is a simple JavaFX calculator app that is capable of performing operations on two numbers at a time. This project has been developed in order to learn more about building window applications, particularly with the use of Java.
+**focusCalc** is a simple calculator app made with Java that is capable of performing operations on two numbers at a time. This project has been developed in order to learn more about building window applications.
 
 ## Features
 
 Some of the main focusCalc features
-* ability to perform basic operations: addition, subtraction, multiplication and division
+* ability to perform operations: addition, subtraction, multiplication and division
 * support for floating point numbers
 * convinient converters from decimal to binary, octal or hexadecimal numeral systems
+* color theme toggle button (light or dark version)
 * compact and minimalistic design
 
 ## Technologies
@@ -31,4 +32,6 @@ The project uses
 
 ## Preview
 
-<img src="https://i.imgur.com/BSTwII9.png" alt="focusCalc_preview" width="450"/>
+<img src="https://i.imgur.com/bltymo9.png" alt="focusCalc_preview_light" width="250"/>   <img src="https://i.imgur.com/C2VUXbl.png" alt="focusCalc_preview_dark" width="250"/> 
+
+The "MADE TOMMY" font was provided by madetype

@@ -8,6 +8,11 @@ import javafx.scene.layout.AnchorPane;
 import java.awt.event.ActionEvent;
 
 public class MainController {
+
+    ////////////////////////
+    // FXML
+    ////////////////////////
+
     @FXML
     Button button0;
     @FXML
@@ -28,7 +33,6 @@ public class MainController {
     Button button8;
     @FXML
     Button button9;
-
     @FXML
     Button buttonAdd;
     @FXML
@@ -58,14 +62,16 @@ public class MainController {
     AnchorPane mainPane;
 
 
+    // stores information about the pressed action button
+    String action;
+    double firstNumber = 0;
+    double secondNumber = 0;
 
-    String action;               // przechowuje informacje o nacisnietym przycisku
-    double firstNumber = 0;      // po nacisniecu przycisku funkcji przechowuje tu pierwszy numer i zeruje display
-    double secondNumber = 0;     // tu druga liczba, przechowywana po nacisnieciu =
-                                 // wynik liczy z dwoch liczb, sprawdza ktory przycisk zostal nacisniety do wykonania dzialania
 
 
-    // odpowiada za przelaczanie trybow
+    ////////////////////////
+    // DARK MODE
+    ////////////////////////
     private boolean isLightMode = true;
 
     public void changeMode() {
@@ -92,23 +98,30 @@ public class MainController {
     }
 
 
-
-
-    // checks for letters in display
+    ////////////////////////
+    // DISPLAY LETTER CHECK
+    ////////////////////////
     private void checkForLetters() {
         if (display.getText().matches(".*[A-Za-z].*") || display.getText().contains(" ")){
             display.setText("0");
         }
     }
 
-    // numeric buttons
-    public void ZeroClicked() {
-        checkForLetters();                                          // sprawdza czy w display nie ma liter
 
-        if (display.getText().equals("0")) {                        // jak jest domyslne zero, to wstawia nacisnieta liczbe
+    ////////////////////////
+    // NUMERIC BUTTONS
+    ////////////////////////
+
+    public void ZeroClicked() {
+        checkForLetters();
+
+        // when the text on the display equals zero, it inserts the pressed number
+        if (display.getText().equals("0")) {
             display.setText("0");
         }
-        else display.setText(display.getText() + "0");              // jak jest cos innego to dodaje nacisnieta liczbe do wczesniejszego tekstu
+
+        // in case of a different number, it adds the pressed number to the previous text string
+        else display.setText(display.getText() + "0");
         }
 
     public void OneClicked() {
@@ -187,7 +200,11 @@ public class MainController {
         else display.setText(display.getText() + "9");
     }
 
-    // action buttons
+
+    ////////////////////////
+    // ACTION BUTTONS
+    ////////////////////////
+
     public void AddClicked() {
         action = "add";
         checkForLetters();
@@ -235,7 +252,6 @@ public class MainController {
                 display.setText(String.valueOf(firstNumber * secondNumber));
                 break;
             case "div":
-                // wyjatek dzielenia przez 0
                 if (secondNumber == 0) {
                     display.setText("Division by 0");
                     break;
@@ -249,11 +265,11 @@ public class MainController {
     public void DotClicked() {
         checkForLetters();
 
-        // blokada przed postawieniem kolejnej kropki na koncu lub drugiej kropki w liczbie
+        // prevents from putting more than two dots in a number or another dot at the end
         if (display.getText().endsWith(".") || display.getText().contains(".")) {
             display.setText(display.getText());
         }
-        // jezeli nie ma kropek, to mozna ja postawic
+        // if there are no dots, it can be inserted
         else display.setText(display.getText() + ".");
     }
 
