@@ -109,7 +109,7 @@
             </Button>
          </children>
       </GridPane>
-      <TextField fx:id="display" alignment="BOTTOM_RIGHT" editable="false" layoutX="4.0" layoutY="128.0" prefHeight="63.0" prefWidth="362.0" styleClass="mainBackground" stylesheets="@../stylesheets/lightMode.css" text="0">
+      <TextField fx:id="display" alignment="BOTTOM_RIGHT" editable="false" layoutX="4.0" layoutY="128.0" prefHeight="63.0" prefWidth="362.0" styleClass="textField" stylesheets="@../stylesheets/lightMode.css" text="0">
          <font>
             <Font name="MADETOMMY" size="30.0" />
          </font>
@@ -133,17 +133,17 @@
                   <Font name="MADETOMMY" size="25.0" />
                </font>
             </Button>
-            <Button fx:id="buttonHexadecimal" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#HexadecimalClicked" prefHeight="63.0" prefWidth="75.0" styleClass="greenButton" stylesheets="@../stylesheets/lightMode.css" text="hex" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <Button fx:id="buttonHexadecimal" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#HexadecimalClicked" prefHeight="63.0" prefWidth="75.0" styleClass="greenButtonText" stylesheets="@../stylesheets/lightMode.css" text="hex" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <font>
                   <Font name="MADETOMMY" size="16.0" />
                </font>
             </Button>
-            <Button fx:id="buttonOctal" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#OctalClicked" prefHeight="63.0" prefWidth="75.0" styleClass="greenButton" stylesheets="@../stylesheets/lightMode.css" text="octal" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <Button fx:id="buttonOctal" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#OctalClicked" prefHeight="63.0" prefWidth="75.0" styleClass="greenButtonText" stylesheets="@../stylesheets/lightMode.css" text="octal" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <font>
                   <Font name="MADETOMMY" size="16.0" />
                </font>
             </Button>
-            <Button fx:id="buttonBinary" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#BinaryClicked" prefHeight="63.0" prefWidth="75.0" styleClass="greenButton" stylesheets="@../stylesheets/lightMode.css" text="binary" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <Button fx:id="buttonBinary" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#BinaryClicked" prefHeight="63.0" prefWidth="75.0" styleClass="greenButtonText" stylesheets="@../stylesheets/lightMode.css" text="binary" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <font>
                   <Font name="MADETOMMY" size="16.0" />
                </font>
@@ -160,7 +160,7 @@
             <Font name="MADETOMMY" size="15.0" />
          </font>
       </Label>
-      <Button fx:id="buttonMode" layoutX="312.0" layoutY="32.0" mnemonicParsing="false" onAction="#changeMode" prefHeight="26.0" prefWidth="34.0" styleClass="mainButton" stylesheets="@../stylesheets/lightMode.css" text="🌙">
+      <Button fx:id="buttonMode" layoutX="312.0" layoutY="32.0" mnemonicParsing="false" onAction="#changeMode" prefHeight="26.0" prefWidth="34.0" styleClass="modeSwitch" stylesheets="@../stylesheets/lightMode.css" text="🌙">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
